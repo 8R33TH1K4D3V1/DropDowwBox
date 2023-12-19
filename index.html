@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #555;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .nested-dropdown {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            min-width: 160px;
+            z-index: 1;
+            background-color: #555;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content:hover .nested-dropdown {
+            display: block;
+        }
+
+        .nested-dropdown a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #444;
+        }
+
+        .nested-dropdown a:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NLC</h1>
+    </header>
+
+    <nav>
+        <div class="dropdown">
+            <span>Environments</span>
+            <div class="dropdown-content">
+                <a href="#topic1">NLCIL POLICY</a>
+                <div class="nested-dropdown environment-policy">
+                    <a href="https://drive.google.com/file/d/1UvZ6EZZ-aScJcUymp9OHcWiyhpsJ8tmY/view?usp=sharing">Environment Policy</a>
+                    <a href="#waste-water-management">Waste Water Management</a>
+                    <!-- Add more nested dropdown options here -->
+                </div>
+                <a href="#topic2">NNTPS-Statutory Clearances</a>
+                <!-- Add more main dropdown options here -->
+                <a href="#topic3">Rules and Notification</a>
+                <a href="#topic4">Standards</a>
+                <a href="#topic5">Environment Management</a>
+                <a href="#topic6">Awareness and Awards</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Your content goes here -->
+
+</body>
+
+</html>
